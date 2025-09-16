@@ -10,12 +10,7 @@ terraform {
 provider "local" {}
 
 resource "local_file" "primeiro" {
-  content  = var.mensagem1
   filename = "${path.module}/primeiro.txt"
-}
-
-resource "local_file" "segundo" {
-  content  = var.mensagem2
-  filename = "${path.module}/segundo.txt"
+  content  = "Meu primeiro arquivo com Terraform 🚀"
 }
 
